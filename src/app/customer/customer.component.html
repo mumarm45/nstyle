@@ -1,0 +1,11 @@
+<div style="margin: auto; max-width: 1000px; margin-bottom: 50px;">
+    <data-table id="customer-grid" headerTitle="Customers" [items]="items" [itemCount]="itemCount" (reload)="reloadItems($event)">
+        <data-table-column [property]="'name'" [header]="'Name'">
+        </data-table-column>
+        <data-table-column [property]="'assessts'" [header]="'Assessts'">
+            <template #dataTableCell let-item="item">
+              <span>item.title</span>
+          </template>
+        </data-table-column>
+    </data-table>
+</div>
