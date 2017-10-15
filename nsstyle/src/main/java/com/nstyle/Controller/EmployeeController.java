@@ -1,7 +1,7 @@
 package com.nstyle.Controller;
 
-import com.nstyle.Model.Customer;
-import com.nstyle.Service.CustomerService;
+import com.nstyle.Model.Employee;
+import com.nstyle.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by mumarm45 on 15/10/2017.
  */
 @RestController
-@RequestMapping(value = "/customer")
-public class CustomerController {
+@RequestMapping(value = "/employee")
+public class EmployeeController {
 
 
     @Autowired
-    public CustomerService customerService;
+    public EmployeeService employeeService;
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
-    public Iterable<Customer> getList(){
+    public Iterable<Employee> getList(){
 
-        return customerService.getList();
+        return employeeService.getList();
     }
 
 }

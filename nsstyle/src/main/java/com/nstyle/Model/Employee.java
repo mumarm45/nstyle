@@ -9,7 +9,7 @@ import java.util.Set;
  * Created by mumarm45 on 15/10/2017.
  */
 @Entity
-public class Customer {
+public class Employee {
 
     @Id
     public long id;
@@ -18,7 +18,7 @@ public class Customer {
             @Size(min = 3,max = 25)
     public String name;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
 
     private Set<Assessts> assessts;
 
@@ -48,7 +48,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", assessts=" + assessts +

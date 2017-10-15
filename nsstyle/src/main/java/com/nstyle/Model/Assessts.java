@@ -16,8 +16,8 @@ public class Assessts {
 
 
     @ManyToOne
-    @JoinColumn(name = "customer_id")
-    Customer customer;
+    @JoinColumn(name = "employee_id")
+    Employee employee;
 
     public long getId() {
         return id;
