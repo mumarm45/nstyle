@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http} from '@angular/http';
 
 @Injectable()
-export class CustomerService {
+export class EmployeeService {
 
-  url = 'http://localhost:8080/customer/list';
+  url = 'http://localhost:8080/employee/list';
   constructor(private http: Http) { }
 
   getList() {
